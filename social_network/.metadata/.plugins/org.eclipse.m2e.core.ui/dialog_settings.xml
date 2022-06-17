@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\pret\Desktop\projet-tp4-bdd\social_network"/>
 			<item value="C:\Users\pret\Desktop\SocialNetwork_TP\social_network"/>
 		</list>
 		<list key="projectNameTemplate">

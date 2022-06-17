@@ -49,7 +49,8 @@ public class UserController {
      * @param
      * @return List of user
      */
-    @GetMapping("/users")
+    @SuppressWarnings("unchecked")
+	@GetMapping("/users")
     public List<User> getAllUsers() {
         logger.info("Find all Users");
         return UserRepository.findAll();
@@ -73,7 +74,8 @@ public class UserController {
      */ 
     @PostMapping(path="/users")
     public ResponseEntity<User> createUser(@RequestBody User user) throws ResourceNotFoundException {
-        User newUser = (User) UserRepository.save(user);
+        @SuppressWarnings("unchecked")
+		User newUser = (User) UserRepository.save(user);
         logger.info("Create User with ID : {}", newUser.getId());
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
@@ -91,7 +93,8 @@ public class UserController {
         userData.setName(user.getName());
         
         
-        User updatedUser = (User) UserRepository.save(userData);
+        @SuppressWarnings("unchecked")
+		User updatedUser = (User) UserRepository.save(userData);
         
         logger.info("Update User with ID :  {}", id);
         
@@ -102,7 +105,8 @@ public class UserController {
      * @param id
      * @return Map<String,Boolean>
      */ 
-    @DeleteMapping("/users/{id}")
+    @SuppressWarnings("unchecked")
+	@DeleteMapping("/users/{id}")
     public Map<String, Boolean> deleteUser(@PathVariable("id") long id)  {
         User user = UserRepository.findById(id);
 
@@ -125,3 +129,4 @@ public class UserController {
 	
 
 }
+

@@ -13,6 +13,7 @@ public class User implements Serializable{
 	private String name;
 	private String email;
 	private String password;
+	private String description;
 	/**
 	 * @return the id
 	 */
@@ -66,6 +67,13 @@ public class User implements Serializable{
 	 */
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	

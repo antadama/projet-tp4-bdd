@@ -9,15 +9,15 @@ public class Post {
 	
 	 @Id
 	    
-	    private Integer id;
+	    private long id;
 	    private User user;
 	    private String content;
-	    private Date createdDate;
+	    
 
 	    public Post() {
 	    }
 
-		public Integer getId() {
+		public long getId() {
 			return id;
 		}
 
@@ -41,12 +41,6 @@ public class Post {
 			this.content = content;
 		}
 
-		public Date getCreatedDate() {
-			return createdDate;
-		}
-
-		public void setCreatedDate(Date createdDate) {
-			this.createdDate = createdDate;
-		}
-	
+		
 }
+
